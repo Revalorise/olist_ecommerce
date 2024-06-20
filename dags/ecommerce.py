@@ -21,7 +21,7 @@ args = {
 
 
 with DAG(
-    'olist_ecommerce',
+    dag_id="olist_ecommerce",
     default_args=args,
     start_date=days_ago(1),
     catchup=False,
@@ -35,7 +35,4 @@ with DAG(
                 source_object=source_object,
                 dag=dag,
             )
-
-
-
 
